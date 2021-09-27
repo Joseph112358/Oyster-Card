@@ -9,7 +9,7 @@ class Oyster_card
   end
 
   def top_up(amount)
-    fail "Maximum balance of 90 exceeded" if @balance + amount > MAXIMUM_BALANCE
+    fail "Maximum balance of #{MAXIMUM_BALANCE} exceeded" if @balance + amount > MAXIMUM_BALANCE
     @balance += amount
   end
 
@@ -18,6 +18,7 @@ class Oyster_card
   end
 
   def touch_in
+    fail "Insufficient funds" if @balance < 1
     @in_journey = true
     return "In use"
   end
@@ -29,4 +30,8 @@ class Oyster_card
   def in_journey?
     @in_journey
   end
+
+  # def check_balance
+  #   @balance
+  # end
  end
