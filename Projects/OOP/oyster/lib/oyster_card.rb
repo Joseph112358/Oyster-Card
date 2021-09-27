@@ -4,7 +4,8 @@ def initialize
 @balance = 0
 end
 
-# def balance
-# return @balance
-# end
+def top_up(amount)
+@balance += amount
+end
+
 end
