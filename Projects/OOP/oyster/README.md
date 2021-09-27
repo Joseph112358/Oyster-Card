@@ -69,4 +69,5 @@ I need to have the correct fare calculated
 - [x] Create Rspec files, and run empty test
 - [x] Review debugging basics
 - [x] Add Balance
-- [ ] Enable top up functionality 
+- [x] Enable top up functionality 
+- [ ] Enforce maximum balance
