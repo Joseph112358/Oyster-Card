@@ -24,4 +24,18 @@ describe Oyster_card do
     expect(subject.balance).to eq 75
   end
 
+  it 'sets card as in use' do
+    expect(subject.touch_in).to eq "In use"
+  end
+
+  it 'checks if card is in_journey?' do
+    subject.touch_in
+    expect(subject.in_journey?).to eq true
+  end
+
+  it 'set card as not in use' do 
+    subject.touch_in
+    subject.touch_out
+    expect(subject.in_journey?).to eq false
+  end
 end
