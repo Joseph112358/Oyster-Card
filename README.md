@@ -65,8 +65,8 @@ As a customer
 I need to have the correct fare calculated
 ```
 ## Progress
-1. [x] Create a Gemfile
-2. [x] Create Rspec files, and run empty test
+- [x] Create a Gemfile
+- [x] Create Rspec files, and run empty test
 - [x] Review debugging basics
 - [x] Add Balance
 - [x] Enable top up functionality 
