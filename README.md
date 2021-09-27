@@ -71,4 +71,5 @@ I need to have the correct fare calculated
 - [x] Add Balance
 - [x] Enable top up functionality 
 - [x] Enforce maximum balance
-- [ ] Deduct the money
+- [x] Deduct the money
+- [ ] Add touch in/out support
