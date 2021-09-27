@@ -15,7 +15,7 @@ Navigate to `http://localhost:4567/`
 1. Change into the 'Oyster-Card' directory (e.g. `cd Oyster-Card`)
 2. Run RSpec `rspec`, for clearer format, run `rspec --format documentation`
 
-## user stories
+## User stories
 ```
 In order to use public transport
 As a customer
@@ -66,7 +66,7 @@ As a customer
 I need to have the correct fare calculated
 ```
 
-## Progress Tracker
+## Progress tracker
 
 ### Set up the project:
 - [x] Create a Gemfile
