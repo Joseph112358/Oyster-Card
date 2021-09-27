@@ -64,3 +64,7 @@ In order to be charged the correct amount
 As a customer
 I need to have the correct fare calculated
 ```
+#Progress
+- [x]Create a Gemfile
+- [x]Create Rspec files, and run empty test
+- []Review debugging basics
