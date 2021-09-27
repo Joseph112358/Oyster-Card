@@ -1,19 +1,17 @@
 # Oyster card
 The project is a test driven, object orientated approach modelling the oyster card system used by London transport.
-## Getting started
 
+## Getting started
 1. Clone this repository `git clone https://github.com/Joseph112358/Oyster-Card.git`
 2. Change into the 'Oyster-Card' directory (e.g. `cd Oyster-Card`)
 3. Install dependencies `install bundle` (e.g. `bundle`)
 
 ## Usage
-
 `command_to_start` (e.g. `rackup` or `rails s`)
 Navigate to `http://localhost:4567/`
 
 
 ## Running tests
-
 1. Change into the 'Oyster-Card' directory (e.g. `cd Oyster-Card`)
 2. Run RSpec `rspec`, for clearer format, run `rspec --format documentation`
 
