@@ -67,4 +67,6 @@ I need to have the correct fare calculated
 #Progress
 - [x] Create a Gemfile
 - [x] Create Rspec files, and run empty test
-- [] Review debugging basics
+- [x] Review debugging basics
+- [x] Add Balance
+- [ ] Enable top up functionality 
