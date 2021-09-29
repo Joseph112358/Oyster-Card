@@ -23,16 +23,10 @@ describe Oyster_card do
     end
   end
 
-  # it 'deducts £15 from account' do
-  #   subject.top_up(maximum_balance)
-  #   subject.deduct(15)
-  #   expect(subject.balance).to eq 75
-  # end
-
   describe '.touch_in' do
     it 'sets card as in use' do
       subject.top_up(10)
-      expect(subject.touch_in(entry_station)).to eq "In use"
+      expect(subject.touch_in(entry_station)).to eq entry_station
     end
 
     it 'checks if card is in_journey?' do
@@ -75,6 +69,13 @@ describe Oyster_card do
       subject.touch_in(entry_station)
       subject.touch_out(exit_station)
       expect(subject.exit_station).to eq exit_station
+    end
+    it 'returns entry and exit stations' do
+      subject.top_up(10)
+      subject.touch_in(entry_station)
+      subject.touch_out(exit_station)
+      expect(subject.trip_history).to eq({entry: entry_station, exit: exit_station})
+
     end
   end
 
