@@ -48,8 +48,4 @@ class Oyster_card
 
  end
 
- class Station
-  def test
-    return "Testing"
-  end
- end
+ 

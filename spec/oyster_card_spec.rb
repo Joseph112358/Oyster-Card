@@ -1,5 +1,6 @@
 require_relative "../lib/oyster_card.rb"
 
+
 describe Oyster_card do
   let(:maximum_balance) {Oyster_card::MAXIMUM_BALANCE}
   let(:minimum_charge) {Oyster_card::MINIMUM_CHARGE}
@@ -57,31 +58,37 @@ describe Oyster_card do
       expect {subject.touch_out(exit_station)}.to change{subject.balance}.by(- minimum_charge)
     end
   end
+  it 'expects an empty list of journeys' do
+    expect(subject.trip_history).to be_empty
+  end
 
   describe 'station' do 
-    it 'stores visited stations' do
+    before do
       subject.top_up(10)
+      subject.touch_in(entry_station)
+      
+    end
+    it 'stores visited stations' do
+      
       #s double("St Pancreas", )
       #station = "St pancreas"
-      subject.touch_in( entry_station)
+      
       expect(subject.entry_station).to eq entry_station
     end
     it 'stores exit station' do
-      subject.top_up(10)
-      subject.touch_in(entry_station)
+      
+      
       subject.touch_out(exit_station)
       expect(subject.exit_station).to eq exit_station
     end
     it 'stores 1 journey in trip_history' do
-      subject.top_up(10)
-      subject.touch_in(entry_station)
+      
+      
       subject.touch_out(exit_station)
       expect(subject.trip_history).to include journey
 
     end
-    it 'expects an empty list of journeys' do
-      expect(subject.trip_history).to be_empty
-    end
+    
   end
 
   
