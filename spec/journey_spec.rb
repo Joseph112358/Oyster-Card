@@ -11,6 +11,12 @@ describe Journey do
     expect(subject.trip_history).to be_empty
   end
 
+  # it 'checks if card is in_journey?' do
+  #   subject.top_up(10)
+  #   subject.touch_in(entry_station)
+  #   expect(subject.in_journey?).to eq true
+  # end
+
   describe "start / finish journey" do
     before(:each) do
       @card = Oyster_card.new

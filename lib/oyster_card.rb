@@ -7,8 +7,8 @@ class Oyster_card
 
   def initialize
     @balance = 0
-    @entry_station
-    @exit_station
+    # @entry_station
+    # @exit_station
     # @trip_history = {}
   end
 
@@ -19,14 +19,14 @@ class Oyster_card
 
   def touch_in(station)
     fail "Insufficient funds" if @balance < MINIMUM_CHARGE
-    @entry_station = station
+    # @entry_station = station
     # @trip_history.store(:entry, station)
   end
 
   def touch_out(station)
     deduct(MINIMUM_CHARGE)
-    @entry_station = nil
-    @exit_station = station
+    # @entry_station = nil
+    # @exit_station = station
     # @trip_history.store(:exit, station)
   end
 
