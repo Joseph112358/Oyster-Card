@@ -5,6 +5,8 @@ describe Oyster_card do
   let(:minimum_charge) {Oyster_card::MINIMUM_CHARGE}
   let(:entry_station) {double :station}
   let(:exit_station) { double :station }
+  let(:journey){ {entry: entry_station, exit: exit_station} }
+
   
   it 'checks the balance is zero at initialisation' do
     
@@ -70,12 +72,15 @@ describe Oyster_card do
       subject.touch_out(exit_station)
       expect(subject.exit_station).to eq exit_station
     end
-    it 'returns entry and exit stations' do
+    it 'stores 1 journey in trip_history' do
       subject.top_up(10)
       subject.touch_in(entry_station)
       subject.touch_out(exit_station)
-      expect(subject.trip_history).to eq({entry: entry_station, exit: exit_station})
+      expect(subject.trip_history).to include journey
 
+    end
+    it 'expects an empty list of journeys' do
+      expect(subject.trip_history).to be_empty
     end
   end
 
