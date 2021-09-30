@@ -27,7 +27,7 @@ class Journey
   end
  
   def finish()
-    @trip_history.store(:exit, exit_station)
+    
   end
 
   def fare()
@@ -39,11 +39,18 @@ class Journey
   end
 
   def complete?()
-
+     @entry_station && @exit_station
   end
 end
 
-#starting a journey
-#finish a journey
-#calculating the fare of a journey
-#calculating whether the journey is complete
+class Journey_Log
+  def initialize(journey_class)
+    @journey_class = journey_class
+  end
+
+  def start(entry_station)
+
+  end
+
+
+end
